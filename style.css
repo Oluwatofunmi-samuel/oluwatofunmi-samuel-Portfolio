@@ -1,0 +1,140 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b1e3f;
+    background-image: radial-gradient(#1c2a4d 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #f0f4f8;
+    animation: bgScroll 30s linear infinite;
+  }
+
+  @keyframes bgScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 1000px 1000px;
+    }
+  }
+
+  .card {
+    background: #15243b;
+    color: #f0f4f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  }
+
+  .ctaButton, .button {
+    background-color: #1f4068 !important;
+    color: #fff !important;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .ctaButton:hover, .button:hover {
+    background-color: #163354 !important;
+    transform: scale(1.05);
+  }
+
+  h1, h2, h3 {
+    color: #fff;
+  }
+
+  .ctaButton:hover {
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: #09192f;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #ffd166;
+  }
+
+  /* Hero Section */
+  .heroContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .overlay {
+    max-width: 700px;
+    animation: fadeIn 2s ease-in;
+  }
+
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: #f0f4f8;
+    margin-bottom: 30px;
+  }
+
+  /* About Section */
+  .aboutContainer {
+    background: #15243b;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 800px;
+    animation: fadeIn 2s ease-in;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    color: #f0f4f8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

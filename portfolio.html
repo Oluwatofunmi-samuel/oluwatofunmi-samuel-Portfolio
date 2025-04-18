@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oluwatofunmi samuel - Portfolio</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div id="root"></div>
+  <script type="text/babel">
+    const Hero = () => {
+      const styles = {
+        heroContainer: {
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "0 20px",
+          textAlign: "center",
+        },
+        overlay: {
+          textAlign: "center",
+          maxWidth: "700px",
+          animation: "fadeIn 2s ease-in",
+        },
+        name: {
+          fontSize: "3rem",
+          fontWeight: "bold",
+          color: "#fff",
+          marginBottom: "10px",
+        },
+        title: {
+          fontSize: "1.8rem",
+          color: "#fff",
+          marginBottom: "20px",
+        },
+        tagline: {
+          fontSize: "1.1rem",
+          color: "#f0f4f8",
+          marginBottom: "30px",
+        },
+        ctaButton: {
+          backgroundColor: "#1f4068",
+          color: "#fff",
+          padding: "12px 24px",
+          borderRadius: "30px",
+          textDecoration: "none",
+          fontWeight: "500",
+          transition: "all 0.3s ease-in-out",
+        },
+      };
+
+      return (
+        <div style={styles.heroContainer}>
+          <div style={styles.overlay}>
+            <h1 style={styles.name}>Oluwatofunmi Samuel</h1>
+            <h2 style={styles.title}>Front-End Web Developer</h2>
+            <p style={styles.tagline}>
+              I build responsive and interactive websites that leave a lasting impression.
+            </p>
+            <a href="#projects" style={styles.ctaButton} className="ctaButton">View My Work</a>
+          </div>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Hero />);
+  </script>
+
+  <!-- About Section -->
+  <div id="about-root"></div>
+  <script type="text/babel">
+    const About = () => {
+      const styles = {
+        aboutContainer: {
+          background: "#15243b",
+          padding: "80px 20px",
+          display: "flex",
+          justifyContent: "center",
+        },
+        content: {
+          maxWidth: "800px",
+          textAlign: "center",
+          animation: "fadeIn 2s ease-in",
+        },
+        heading: {
+          fontSize: "2.5rem",
+          color: "#fff",
+          marginBottom: "30px",
+        },
+        text: {
+          fontSize: "1.1rem",
+          color: "#f0f4f8",
+          marginBottom: "20px",
+          lineHeight: "1.6",
+        },
+      };
+
+      return (
+        <div style={styles.aboutContainer} id="about">
+          <div style={styles.content}>
+            <h2 style={styles.heading}>About Me</h2>
+            <p style={styles.text}>
+              Hello! I'm <strong>Onanuga Samuel Boluwatife</strong>, a front-end web developer passionate about creating beautiful, functional, and responsive websites. I love turning ideas into reality using clean and efficient code.
+            </p>
+            <p style={styles.text}>
+              I specialize in HTML, CSS, JavaScript, and React. I'm always learning new technologies to improve user experience and build modern interfaces.
+            </p>
+            <p style={styles.text}>
+              When I'm not coding, I'm exploring design tools, learning UI/UX, and building side projects that challenge and grow my skills.
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    const aboutRoot = ReactDOM.createRoot(document.getElementById("about-root"));
+    aboutRoot.render(<About />);
+  </script>
+
+  <!-- Projects Section -->
+  <div id="projects">
+    <h2 style="text-align:center; font-size:2.5rem; color:#fff; margin-bottom:40px;">My Projects</h2>
+    <div class="grid" id="projectsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 20px 80px;"></div>
+  </div>
+  <script>
+    const projects = [
+      {
+        title: "  PureGlow Skincare Website",
+        description: "PureGlow Skincare is a visually captivating website designed to showcase skincare products with stunning visuals and easy navigation. Built with Html, Css and Javascript, the site features product showcases, customer testimonials, a brand story section, and a simple shop or newsletter sign-up, offering an engaging user experience for skincare enthusiasts",
+        tech: ["Html", "CSS", "Javascript"],
+        liveLink: "https://oluwatofunmi-samuel.github.io/Pureglow-Skincare/",
+        githubLink: "https://github.com/Oluwatofunmi-samuel/Pureglow-Skincare",
+        image: "pureglow.jpg"
+      },
+      {
+        title: "Job-listing-Filtering-page",
+        description: "Job Listing Filtering Page is a user-friendly platform built with Javascript and styled using Css, designed to help users easily search and filter through job listings. The site features an intuitive interface, allowing users to quickly find the right job based on various criteria, such as location, position, and experience level.",
+        tech: ["HTml", "CSS", "Javascript"],
+        liveLink: "https://oluwatofunmi-samuel.github.io/Job-listing-filering-page/",
+        githubLink: "https://github.com/Oluwatofunmi-samuel/Job-listing-filering-page",
+        image: "joblisting.jpg"
+      },
+      {
+        title: "BeanBrew Cofee",
+        description: "BeanBrew is a coffee shop website designed to showcase a variety of coffee blends, from bold espressos to smooth lattes. Built with React and styled using Tailwind CSS, the site allows users to easily explore and find their perfect coffee flavor with an intuitive and responsive interface.",
+        tech: ["React", "TailwindCSS"],
+        liveLink: "https://oluwatofunmi-samuel.github.io/BeanBrew-cofee/",
+        githubLink: "https://github.com/Oluwatofunmi-samuel/BeanBrew-cofee",
+        image: "beanbrew.jpg"
+      }
+    ];
+
+    const container = document.getElementById("projectsGrid");
+
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${project.image}" alt="${project.title}" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 10px;">${project.title}</h3>
+        <p style="font-size: 1rem; color: #f0f4f8; margin-bottom: 10px;">${project.description}</p>
+        <p class="tech" style="font-size: 0.9rem; color: #aaa; margin-bottom: 15px;">Built with: ${project.tech.join(", ")}</p>
+        <div class="links" style="display: flex; justify-content: space-between;">
+          <a href="${project.liveLink}" target="_blank" style="text-decoration: none; color: #fff; font-weight: bold; border: 1px solid #fff; padding: 6px 12px; border-radius: 20px;">Live</a>
+          <a href="${project.githubLink}" target="_blank" style="text-decoration: none; color: #fff; font-weight: bold; border: 1px solid #fff; padding: 6px 12px; border-radius: 20px;">GitHub</a>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+  <!-- Contact & Footer -->
+  <div class="contact-container" id="contact" style="padding: 80px 20px; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 20px;">Let's Connect</h2>
+    <p style="font-size: 1.1rem; color: #f0f4f8; max-width: 600px; margin: 0 auto 30px;">
+      I'm always open to opportunities, collaborations, or just a chat. Reach out to me via email or on social media!
+    </p>
+    <a href="mailto:onanugasamuelboluwatife@gmail.com" class="button" style="background-color: #1f4068; color: #fff; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 500;">Say Hello</a>
+
+    <div class="socials" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <a href="https://github.com/Oluwatofunmi-samuel" target="_blank" style="text-decoration: none; color: #fff; font-weight: bold;">GitHub</a>
+      <a href="https://x.com/Oluwatofunmisam?t=-mNVGPbCHWmj50BcPqMlbw&s=09" target="_blank" style="text-decoration: none; color: #fff; font-weight: bold;">Twitter</a>
+    </div>
+  </div>
+
+  <footer style="background-color: #09192f; color: white; padding: 20px; text-align: center; font-size: 0.9rem;">
+    &copy; 2025 Onanuga Samuel Boluwatife. Built with passion. | <a href="#contact" style="color: #ffd166; text-decoration: none; font-weight: 500;">Contact Me</a>
+  </footer>
+
+</body>
+</html>
